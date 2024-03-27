@@ -71,3 +71,32 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+INSTALANDO O NEST (DIGITAR NO CMD DO WINDOWS DENTRO DA PASTA DO PROJETO)
+**npm i -g @nestjs/cli**
+
+ -----------COMANDOS DO GIT ------------------
+CLONANDO (LINKAR) O PROJETO QUE ESTA NO GIT PARA INICIAR. DIGITAR DENTRO DA PASTA DO PROJETO NO CMD DO WINDOWS
+**git clone**
+
+MOSTRAR O ESTATUS DO PROJETO NO GIT
+**git status**
+
+PREPARANDO PARA ADCIONAR NO GIT
+**git add .**
+
+PREPARANDO O COMMIT NO GIT COM UMA MENSAGEM
+**git commit -m "feat:start project"**
+
+ENVIANDO AS ALTERAÇÕES
+**git push**
+
+
+-----------COMANDOS DO PROJETO ------------------
+
+INICIAR O PROJETO NO MODO DEV
+**npm run start:dev**
+
+CRANDO MOLUDOS PELO TERMINAL
+**nest g module user**
