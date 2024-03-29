@@ -100,3 +100,18 @@ INICIAR O PROJETO NO MODO DEV
 
 CRANDO MOLUDOS PELO TERMINAL
 **nest g module user**
+
+
+-----------DEPENDENCIAS INSTALADAS NO PROJETO ------------------
+
+DEPENDENCIA PARA CRIPTOGRAFAR A SENHA
+
+**npm i bcrypt**
+**npm i -D @types/bcrypt**
+
+DEPENDENCIA PARA A CONECXÃO DO BANCO DE DADOS
+**npm i --save @nestjs/config**
+
+DEPENDENCIA DO GERENCIADOR DO BANCO DE DADOS
+**npm install --save typeorm pg @nestjs/typeorm**
+
