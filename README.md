@@ -101,6 +101,10 @@ INICIAR O PROJETO NO MODO DEV
 CRANDO MOLUDOS PELO TERMINAL
 **nest g module user**
 
+CRAINDO AS MIGRATIONS
+./src/migration/create_table_user (SIGINIFICA A PASTA QUE SERA CRIADA)
+**npx typeorm migration:create ./src/migration/nome_da_migration(sem TS)**
+
 
 -----------DEPENDENCIAS INSTALADAS NO PROJETO ------------------
 
