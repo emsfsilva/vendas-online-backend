@@ -99,7 +99,8 @@ INICIAR O PROJETO NO MODO DEV
 **npm run start:dev**
 
 CRANDO MOLUDOS PELO TERMINAL
-**nest g module user**
+(São pastas que ficam no SRC)
+**nest g module nomedapasta**
 
 CRAINDO AS MIGRATIONS
 ./src/migration/create_table_user (SIGINIFICA A PASTA QUE SERA CRIADA)
@@ -118,4 +119,7 @@ DEPENDENCIA PARA A CONECXÃO DO BANCO DE DADOS
 
 DEPENDENCIA DO GERENCIADOR DO BANCO DE DADOS
 **npm install --save typeorm pg @nestjs/typeorm**
+
+DEPENDENCIA PARA CHACHE DOS ESTADOS (carregamento rapido)
+**npm install cache-manager**
 
