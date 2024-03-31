@@ -123,3 +123,6 @@ DEPENDENCIA DO GERENCIADOR DO BANCO DE DADOS
 DEPENDENCIA PARA CHACHE DOS ESTADOS (carregamento rapido)
 **npm install cache-manager**
 
+DEPENDENCIA PARA VALIDAR O USUARIO LOGADO
+**npm i --save class-validator class transformer**
+
