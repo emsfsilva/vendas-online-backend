@@ -126,3 +126,9 @@ DEPENDENCIA PARA CHACHE DOS ESTADOS (carregamento rapido)
 DEPENDENCIA PARA VALIDAR O USUARIO LOGADO
 **npm i --save class-validator class transformer**
 
+DEPENDENCIA PARA AUTENTICAÇÃO
+**npm install --save @nestjs/passport passport passport-local**
+**npm install --save-dev @types/passport-local**
+
+
+
