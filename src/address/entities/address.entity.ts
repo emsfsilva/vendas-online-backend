@@ -22,7 +22,7 @@ export class AddressEntity {
   @Column({ name: 'cep', nullable: false })
   cep: string;
 
-  @Column({ name: 'city_ad', nullable: false })
+  @Column({ name: 'city_id', nullable: false })
   cityId: number;
 
   @CreateDateColumn({ name: 'created_at' })
