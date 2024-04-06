@@ -102,9 +102,10 @@ CRANDO MOLUDOS PELO TERMINAL
 (São pastas que ficam no SRC)
 **nest g module nomedapasta**
 
-CRAINDO AS MIGRATIONS
+CRAINDO AS MIGRATIONS (SCRIPT QUE CRIA OU ALTERA A TABELA NO BANCO)
 ./src/migration/create_table_user (SIGINIFICA A PASTA QUE SERA CRIADA)
 **npx typeorm migration:create ./src/migration/nome_da_migration(sem TS)**
+EXEMPLO: npx typeorm migration:create ./src/migration/create-table-category
 
 
 -----------DEPENDENCIAS INSTALADAS NO PROJETO ------------------
