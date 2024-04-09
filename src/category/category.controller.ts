@@ -27,7 +27,7 @@ export class CategoryController {
   }
 
   //Metodo que retorna a criação da categoria vindo do categoryService
-  @Roles(UserType.Admin, UserType.User)
+  @Roles(UserType.Admin)
   @UsePipes(ValidationPipe)
   @Post()
   async createCategory(
