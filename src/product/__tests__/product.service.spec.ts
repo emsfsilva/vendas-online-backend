@@ -1,4 +1,3 @@
-import { updateProductMock } from './../__mocks__/update-product.mock';
 import { Repository } from 'typeorm';
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProductService } from '../product.service';
