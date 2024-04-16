@@ -4,12 +4,14 @@ import { CartProductEntity } from './entities/cart-product.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { InsertCartDTO } from 'src/cart/dtos/insert-cart.dto';
 import { CartEntity } from 'src/cart/entities/cart.entity';
+import { ProductService } from 'src/product/product.service';
 
 @Injectable()
 export class CartProductService {
   constructor(
     @InjectRepository(CartProductEntity)
     private readonly cartProductRepository: Repository<CartProductEntity>,
+    private readonly productService: ProductService,
   ) {}
 
   //Buscando o produto especifico no carrinho
@@ -47,6 +49,9 @@ export class CartProductService {
     insertCartDTO: InsertCartDTO,
     cart: CartEntity,
   ): Promise<CartProductEntity> {
+    //Verifica se o produto existe antes de adcionar no carrinho, pq se não existur deve suber a exceção de findProductById
+    await this.productService.findProductById(insertCartDTO.productId);
+
     const cartProduct = await this.verifyProductInCart(
       insertCartDTO.productId,
       cart.id,
