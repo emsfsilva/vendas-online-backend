@@ -1,8 +1,8 @@
-import { ReturnPaymentDTO } from 'src/payment/dtos/return-payment.dto';
+import { ReturnPaymentDTO } from '../../payment/dtos/return-payment.dto';
 import { ReturnAddressDto } from '../../address/dtos/returnAddress.dto';
 import { ReturnUserDto } from '../../user/dtos/returnUser.dto';
 import { OrderEntity } from '../entities/order.entity';
-import { ReturnOrderProductDTO } from 'src/order-product/dtos/return-order-product.dto';
+import { ReturnOrderProductDTO } from '../../order-product/dtos/return-order-product.dto';
 
 export class ReturnOrderDTO {
   id: number;

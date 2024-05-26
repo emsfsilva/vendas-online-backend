@@ -1,13 +1,13 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Repository } from 'typeorm';
 import { getRepositoryToken } from '@nestjs/typeorm';
+import { CityService } from '../../city/city.service';
+import { cityMock } from '../../city/__mocks__/city.mock';
+import { UserService } from '../../user/user.service';
+import { userEntityMock } from '../../user/__mocks__/user.mock';
+import { Repository } from 'typeorm';
 import { AddressService } from '../address.service';
 import { AddressEntity } from '../entities/address.entity';
 import { addressMock } from '../__mocks__/address.mock';
-import { UserService } from '../../user/user.service';
-import { userEntityMock } from '../../user/__mocks__/user.mock';
-import { CityService } from '../../city/city.service';
-import { cityMock } from '../../city/__mocks__/city.mock';
 import { createAddressMock } from '../__mocks__/create-address.mock';
 
 describe('AddressService', () => {
@@ -57,16 +57,14 @@ describe('AddressService', () => {
     expect(addressRepository).toBeDefined();
   });
 
-  //-------------TESTANDO O ENDEREÇO--------------------
   it('should return address after save', async () => {
     const address = await service.createAddress(
       createAddressMock,
       userEntityMock.id,
     );
+
     expect(address).toEqual(addressMock);
   });
-
-  //-------------TESTANDO O RETURNO DO USUARIO PELO ID--------------------
 
   it('should return error if exception in userService', async () => {
     jest.spyOn(userService, 'findUserById').mockRejectedValueOnce(new Error());
@@ -76,8 +74,6 @@ describe('AddressService', () => {
     ).rejects.toThrowError();
   });
 
-  //-------------TESTANDO O RETURNO DA CIDADE PELO ID--------------------
-
   it('should return error if exception in cityService', async () => {
     jest.spyOn(cityService, 'findCityById').mockRejectedValueOnce(new Error());
 
@@ -86,16 +82,13 @@ describe('AddressService', () => {
     ).rejects.toThrowError();
   });
 
-  //-------------TESTANDO BUSCAR A LISTA DE USUARIOS POR ENDERECO--------------------
-
-  it('should return all address to user', async () => {
+  it('should return all addresses to user', async () => {
     const addresses = await service.findAddressByUserId(userEntityMock.id);
 
     expect(addresses).toEqual([addressMock]);
   });
 
-  it('should return not found not address register', async () => {
-    const addresses = await service.findAddressByUserId(userEntityMock.id);
+  it('should return not found if not address registred', async () => {
     jest.spyOn(addressRepository, 'find').mockResolvedValue(undefined);
 
     expect(
