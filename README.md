@@ -133,6 +133,11 @@ DEPENDENCIA PARA AUTENTICAÇÃO
 **npm install --save @nestjs/jwt passport-jwt**
 **npm install --save-dev @types/passport-jwt**
 
+DEPENDEENCIA DOS CORREIOS
+
+**npm i --save @nestjs/axios axios**
+**npm install nestjs-soap** calcular o frete
+
 
 
 

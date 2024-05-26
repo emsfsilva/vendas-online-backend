@@ -5,6 +5,7 @@ import {
   Entity,
   OneToMany,
   PrimaryGeneratedColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity({ name: 'state' })
@@ -15,11 +16,14 @@ export class StateEntity {
   @Column({ name: 'name', nullable: false })
   name: string;
 
-  @CreateDateColumn({ name: 'created_at' })
-  created_at: Date;
+  @Column({ name: 'uf', nullable: false })
+  uf: string;
 
-  @CreateDateColumn({ name: 'updated_at' })
-  updated_at: Date;
+  @CreateDateColumn({ name: 'created_at' })
+  createdAt: Date;
+
+  @UpdateDateColumn({ name: 'updated_at' })
+  updatedAt: Date;
 
   @OneToMany(() => CityEntity, (city) => city.state)
   cities?: CityEntity[];
