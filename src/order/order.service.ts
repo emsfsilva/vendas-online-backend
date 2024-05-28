@@ -111,6 +111,7 @@ export class OrderService {
     return orders;
   }
 
+  //Buscar todos as ordens. Só admin pode fazer isso
   async findAllOrders(): Promise<OrderEntity[]> {
     const orders = await this.orderRepository.find({
       relations: {

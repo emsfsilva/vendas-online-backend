@@ -48,6 +48,7 @@ export class OrderController {
     return;
   }
 
+  //Buscar todos as ordens. Só admin pode fazer isso
   @Roles(UserType.Admin, UserType.Root)
   @Get('/all')
   async findAllOrders(): Promise<ReturnOrderDTO[]> {
